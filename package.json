@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "main": "src/js/app.js",
+  "dependencies": {
+    "flux": "^2.0.1",
+    "keymirror": "~0.1.0",
+    "object-assign": "^1.0.0",
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-browserify":"^0.5.1",
+    "gulp-less":"^3.0.3",
+    "gulp-watch":"^4.2.4",
+    "browserify":"^10.2.6",
+    "reactify":"^1.1.1",
+    "gulp-util": "~3.0.6",
+    "gulp-notify": "~2.2.0",
+    "vinyl-source-stream": "~1.1.0",
+    "watchify": "~3.2.3"
+  },
+  "scripts": {
+    "start": "watchify -o build/app.js -v -d src/js/app.js",
+    "build": "browserify . -t [envify --NODE_ENV production] | uglifyjs -cm > build/app.min.js",
+    "test": "jest"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  }
+}

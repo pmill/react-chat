@@ -1,0 +1,51 @@
+body {
+  background-color: #dadada;
+}
+#chatbox,
+.chatBox,
+.chatLogin {
+  height: 100%;
+}
+.column {
+  max-width: 450px;
+}
+.chatMessageList {
+  height: 100%;
+}
+.chatMessageList ul {
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.chatMessage {
+  list-style-type: none;
+  padding-right: 10px;
+}
+.chatMessage.notification {
+  font-size: 12px;
+}
+.chatMessage.user {
+  text-align: left;
+  padding-bottom: 8px;
+}
+.chatMessage.user strong {
+  display: inline-block;
+  color: #777;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 0 3px;
+  font-weight: normal;
+}
+.chatMessage.user label {
+  display: inline-block;
+  background-color: white;
+  max-width: 75%;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+.chatMessage.user.ownedByMe {
+  text-align: right;
+}
+.chatMessage.user.ownedByMe label {
+  background-color: #ffe;
+}
