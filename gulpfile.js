@@ -48,7 +48,7 @@ function buildScript(file, watch) {
 gulp.task('less', function () {
     return gulp.src('./src/less/app.less')
         .pipe(less())
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./build'));
 });
 
 gulp.task('js', function() {
